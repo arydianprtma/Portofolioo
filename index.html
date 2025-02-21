@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav id="navbar" class="modern-nav">
+        <div class="logo">
+            <i class="fas fa-code"></i>
+            <span>Portfolio</span>
+        </div>
+        <ul>
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="hero">
+            <div id="stars" class="stars"></div>
+            <div class="hero-content">
+                <h1>Welcome to My Portfolio</h1>
+                <div class="typing-text">
+                    <span class="first-text">I'm a </span>
+                    <span class="text sec-text">Developer</span>
+                </div>
+                
+                <div class="tech-icons">
+                    <div class="tech-icon" data-tooltip="HTML5">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <div class="tech-icon" data-tooltip="CSS3">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <div class="tech-icon" data-tooltip="JavaScript">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <div class="tech-icon" data-tooltip="Database">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="tech-icon" data-tooltip="Bootstrap">
+                        <i class="fab fa-bootstrap"></i>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-eye"></i> View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-paper-plane"></i> Contact Me
+                    </a>
+                </div>
+            </div>
+            
+            <div id="globe-container"></div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-img">
+                <img src="Berners-Lee wins first Queen Elizabeth Prize for Engineering.jpeg" alt="Profile Picture">
+            </div>
+            <div class="about-text">
+                <h3>Full Stack Developer</h3>
+                <p>Hello! I'm a passionate web developer with experience in creating modern and responsive websites. I specialize in building full-stack applications that deliver exceptional user experiences.</p>
+                <p>With a strong foundation in both front-end and back-end technologies, I bring creative designs to life with clean, efficient code.</p>
+                
+                <div class="skill-bars">
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>HTML & CSS</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="progress-line"><span style="width:95%"></span></div>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>JavaScript</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress-line"><span style="width:90%"></span></div>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>React</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress-line"><span style="width:85%"></span></div>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Node.js</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress-line"><span style="width:80%"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        
+        <div class="project-filters">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Web Apps</button>
+            <button class="filter-btn">UI/UX</button>
+            <button class="filter-btn">Mobile</button>
+        </div>
+        
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="Berners-Lee wins first Queen Elizabeth Prize for Engineering.jpeg" alt="Project 1">
+                <div class="card-content">
+                    <h3>E-Commerce Platform</h3>
+                    <p>A full-featured online store with payment processing, inventory management, and admin dashboard.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">Node.js</span>
+                        <span class="project-tag">MongoDB</span>
+                    </div>
+                    <div class="card-links">
+                        <a href="#" class="card-link">
+                            <i class="fas fa-eye"></i> Live Demo
+                        </a>
+                        <a href="#" class="card-link">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <img src="Berners-Lee wins first Queen Elizabeth Prize for Engineering.jpeg" alt="Project 2">
+                <div class="card-content">
+                    <h3>Travel App UI</h3>
+                    <p>Modern travel application interface with smooth animations and responsive design.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">Tailwind CSS</span>
+                        <span class="project-tag">Framer Motion</span>
+                    </div>
+                    <div class="card-links">
+                        <a href="#" class="card-link">
+                            <i class="fas fa-eye"></i> Live Demo
+                        </a>
+                        <a href="#" class="card-link">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <img src="Berners-Lee wins first Queen Elizabeth Prize for Engineering.jpeg" alt="Project 3">
+                <div class="card-content">
+                    <h3>Weather Dashboard</h3>
+                    <p>Real-time weather application with interactive maps and detailed forecasts.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">Weather API</span>
+                        <span class="project-tag">MapBox</span>
+                    </div>
+                    <div class="card-links">
+                        <a href="#" class="card-link">
+                            <i class="fas fa-eye"></i> Live Demo
+                        </a>
+                        <a href="#" class="card-link">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Let's Talk</h3>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>your.email@example.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+1 234 567 890</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h4>Location</h4>
+                        <p>City, Country</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" required>
+                    <label>Your Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" required>
+                    <label>Your Email</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" required>
+                    <label>Subject</label>
+                </div>
+                <div class="form-group">
+                    <textarea required></textarea>
+                    <label>Message</label>
+                </div>
+                <button type="submit">Send Message <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+                <a href="#" class="footer-link">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Stars Animation
+        function createStars() {
+            const stars = document.getElementById('stars');
+            const count = 100;
+            
+            for(let i = 0; i < count; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.animationDelay = `${Math.random() * 5}s`;
+                stars.appendChild(star);
+            }
+        }
+
+        // Scroll to Top Button
+        const scrollTopBtn = document.querySelector('.scroll-top');
+        window.addEventListener('scroll', () => {
+            if(window.pageYOffset > 100) {
+                scrollTopBtn.classList.add('active');
+            } else {
+                scrollTopBtn.classList.remove('active');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if(window.pageYOffset > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            createStars();
+        });
+    </script>
+</body>
+</html>
