@@ -14,6 +14,68 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     this.reset();
 });
 
+const TEMPLATE_ID = 'template_bsz2d77'; // Ganti dengan template ID Anda
+const SERVICE_ID = 'service_4ppzh9d';   // Ganti dengan service ID Anda
+const PUBLIC_KEY = 'bht97ebg7L99MvT5A';    // Ganti dengan public key Anda
+
+// Email sending function
+function sendEmail(e) {
+    e.preventDefault();
+    
+    const btn = e.target.querySelector('button[type="submit"]');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
+    btn.disabled = true;
+
+    emailjs.init(PUBLIC_KEY);
+
+    const templateParams = {
+        name: e.target.user_name.value,
+        email: e.target.user_email.value,
+        subject: e.target.subject.value,
+        message: e.target.message.value,
+        to_name: "Ary Dian Pratama",
+        to_email: "arydianprtma@gmail.com",
+        reply_to: e.target.user_email.value
+    };
+
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            showNotification('Message sent successfully!', 'success');
+            e.target.reset();
+        }, function(error) {
+            console.log('FAILED...', error);
+            showNotification('Failed to send message. Please try again.', 'error');
+        })
+        .finally(() => {
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+        });
+
+    return false;
+}
+
+function showNotification(message, type) {
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    notification.innerHTML = `
+        <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
+        ${message}
+    `;
+    document.body.appendChild(notification);
+
+    setTimeout(() => {
+        notification.classList.add('show');
+        setTimeout(() => {
+            notification.classList.remove('show');
+            setTimeout(() => {
+                notification.remove();
+            }, 300);
+        }, 3000);
+    }, 100);
+}
+
 // Add scroll animation for sections
 const sections = document.querySelectorAll('section');
 window.addEventListener('scroll', function() {
@@ -113,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Update Multiple Text Typing Animation
 function initTypewriter() {
-    const texts = ["Developer", "Designer", "Freelancer", "Full Stack"];
+    const texts = ["Developer", "Frontend", "Designer", "Freelancer"];
     const secText = document.querySelector(".sec-text");
     let currentTextIndex = 0;
     let currentCharIndex = 0;
@@ -154,4 +216,48 @@ window.addEventListener('resize', () => {
     const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(container.clientWidth, container.clientHeight);
+});
+
+// Stars Animation
+function createStars() {
+    const stars = document.getElementById('stars');
+    const count = 100;
+    
+    for(let i = 0; i < count; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.animationDelay = `${Math.random() * 5}s`;
+        stars.appendChild(star);
+    }
+}
+
+// Scroll to Top Button
+const scrollTopBtn = document.querySelector('.scroll-top');
+window.addEventListener('scroll', () => {
+    if(window.pageYOffset > 100) {
+        scrollTopBtn.classList.add('active');
+    } else {
+        scrollTopBtn.classList.remove('active');
+    }
+});
+
+scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+});
+
+// Navbar Scroll Effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    if(window.pageYOffset > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+    createStars();
 });
